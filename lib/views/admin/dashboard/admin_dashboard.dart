@@ -1,4 +1,5 @@
 import 'package:bring_the_menu/constants.dart';
+import 'package:bring_the_menu/views/admin/edit/edit_admin.dart';
 import 'package:bring_the_menu/views/widgets/admin_option_card.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
@@ -32,7 +33,11 @@ class _AdminDashboardState extends State<AdminDashboard> {
             )),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+               setState(() {
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>AdminEditPage()));
+               });
+              },
               icon: Icon(
                 Icons.edit,
                 color: constants.whiteTextColor,
@@ -53,7 +58,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
           children: [
             SizedBox(height: Get.height / 30),
             Text(
-              'Welcome, Admin',
+              'Welcome, Admin ',
               style: TextStyle(
                   color: constants.whiteTextColor,
                   fontSize: 30,

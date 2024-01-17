@@ -69,7 +69,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: isfirstrun?'/OnBoardingPage':'/adminSignup',
+      initialRoute: isfirstrun?'/OnBoardingPage':'/adminDashboard',
       theme: ThemeData(fontFamily: 'Lexend'),
       getPages: [
         GetPage(name: '/OnBoardingPage', page:() => const OnBoardingPage()),

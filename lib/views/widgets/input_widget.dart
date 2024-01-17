@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:bring_the_menu/constants.dart';
 
-class InputWidget extends StatelessWidget {
+class InputWidget extends StatefulWidget {
   InputWidget(
       {Key? key,
       required this.constants,
@@ -10,7 +10,7 @@ class InputWidget extends StatelessWidget {
       required this.hintText,
       required this.controller,
       this.textInputType,
-      required this.isObscrue})
+      required this.isObscrue, this.keyboardType})
       : super(key: key);
 
 
@@ -25,6 +25,12 @@ class InputWidget extends StatelessWidget {
 
   @override
   State<InputWidget> createState() => _InputWidgetState();
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }
 }
 
 class _InputWidgetState extends State<InputWidget> {
@@ -59,8 +65,8 @@ class _InputWidgetState extends State<InputWidget> {
                   border: Border.all(color: widget.constants.inputStrokeColor)),
               child: TextFormField(
 
-                controller: controller,
-                keyboardType: textInputType ?? TextInputType.text,
+                controller: TextEditingController(),
+                keyboardType: TextInputType.text,
 
                 obscureText: isPassword ? widget.isObscrue : false,
 

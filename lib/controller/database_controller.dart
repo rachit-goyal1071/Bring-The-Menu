@@ -50,6 +50,17 @@ class DatabaseController extends GetxController {
     });
   }
 
+  Future<void> editProfile(
+      String restaurentName,
+      GeoPoint restaurentLocation,
+      String phone,
+      String website,
+      String upiController,
+      String openTime,
+      String CloseTime
+      ) async{
+
+  }
   Future<bool> profileAvailable() async {
     final user = _auth.currentUser?.uid;
     print("000000000000000000 $user");
